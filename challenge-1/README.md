@@ -8,7 +8,8 @@ Upon any instance of [CTRL+V] in the string, this clipboard should be pasted in 
 
 If [CTRL+V] is encountered before any corresponding [CTRL+C] then it should simply paste nothing.
 
-Rewards:
+### Rewards:
+
 5: Points are awarded for a working algorithm as described above
 
 3:  Further points are awarded for supporting [CTRL+X], which should remove the preceding text before copying it to the clipboard
