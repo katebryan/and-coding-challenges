@@ -5,4 +5,10 @@ describe("Tests the string copier function", () => {
         const simpleTestString = ["hello"];
         expect(stringCopier(["hello"])).toStrictEqual(simpleTestString);
     });
+
+    it("when [CTRL+C] is found the content before is saved and pasted when [CTRL+V] appears", () => {
+        const inputString = ["the first[CTRL+C][CTRL+V]"];
+        const expectedResult = "the firstthe first"
+        expect(stringCopier(inputString)).toStrictEqual(expectedResult);
+    });
 });
