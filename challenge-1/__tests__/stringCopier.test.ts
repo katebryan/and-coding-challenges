@@ -1,9 +1,8 @@
 import { stringCopier } from "../src/stringCopier";
 
-describe("test add function", () => {
-    it("should return 15 for add(10,5)", () => {
+describe("Tests the string copier function", () => {
+    it("should return the same string", () => {
         const simpleTestString = ["hello"];
-
         expect(stringCopier(["hello"])).toStrictEqual(simpleTestString);
     });
 });
