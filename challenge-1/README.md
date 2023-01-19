@@ -10,7 +10,9 @@ If [CTRL+V] is encountered before any corresponding [CTRL+C] then it should simp
 
 Rewards:
 5: Points are awarded for a working algorithm as described above
+
 3:  Further points are awarded for supporting [CTRL+X], which should remove the preceding text before copying it to the clipboard
+
 2:  Further points are awarded for validating your solution with a collection of unit tests
 
 For this example input:
