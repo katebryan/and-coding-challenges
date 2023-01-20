@@ -13,7 +13,7 @@ export const stringCopier = (input: Array<string>) => {
     const arrayOfSplitStrings = inputString.split(copyRegex);
 
     if (arrayOfSplitStrings[1].search(pasteRegex) !== -1) {
-        arrayOfSplitStrings[1] = 'the first'
+        arrayOfSplitStrings[1] = arrayOfSplitStrings[0]
     }
 
     return arrayOfSplitStrings.join('')
