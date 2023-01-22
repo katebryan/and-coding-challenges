@@ -12,6 +12,12 @@ describe("Tests the string copier function", () => {
         expect(stringCopier(inputString)).toStrictEqual(expectedResult);
     });
 
+    it("when only [CTRL+V] is present, the original string is returned with the command cut", () => {
+        const inputString = "[CTRL+V]the tall oak tree towers over the lush green meadow.";
+        const expectedResult = "the tall oak tree towers over the lush green meadow.";
+        expect(stringCopier(inputString)).toStrictEqual(expectedResult);
+    });
+
     it("when [CTRL+C] is found, the content before is saved and pasted when [CTRL+V] appears", () => {
         const inputString = "the first[CTRL+C][CTRL+V]";
         const expectedResult = "the firstthe first"

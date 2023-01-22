@@ -4,7 +4,8 @@ export const stringCopier = (input: string) => {
     const pasteRegex = /\[(?:CTRL\+V)]/g
 
     if (input.split(copyRegex).length <= 1) {
-        return input;
+        // check for pasteRegex, then cut this from the string and return the original input
+        return input.replace(pasteRegex, '');
     }
 
     const arrayOfSplitStrings = input.split(copyRegex);
