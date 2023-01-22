@@ -9,9 +9,7 @@ export const stringCopier = (input: string) => {
 
     const arrayOfSplitStrings = input.split(copyRegex);
 
-    if (arrayOfSplitStrings[1].search(pasteRegex) !== -1) {
-        arrayOfSplitStrings[1] = arrayOfSplitStrings[0]
-    }
+    const stringToCopy = arrayOfSplitStrings[0]
 
-    return arrayOfSplitStrings.join('')
+    return arrayOfSplitStrings.join('').replace(pasteRegex, stringToCopy);
 };
