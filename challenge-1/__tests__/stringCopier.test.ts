@@ -22,5 +22,8 @@ describe("Tests the string copier function", () => {
         const inputString = "the first[CTRL+C] Coding Challenge was [CTRL+V] string manipulation task";
         const expectedResult = "the first Coding Challenge was the first string manipulation task";
         expect(stringCopier(inputString)).toStrictEqual(expectedResult);
+        const inputString2 = "the big red[CTRL+C] fox jumps over [CTRL+V] lazy dog.";
+        const expectedResult2 = "the big red fox jumps over the big red lazy dog.";
+        expect(stringCopier(inputString2)).toStrictEqual(expectedResult2);
     });
 });
