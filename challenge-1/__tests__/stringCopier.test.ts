@@ -32,4 +32,10 @@ describe("Tests the string copier function", () => {
         const expectedResult2 = "the big red fox jumps over the big red lazy dog.";
         expect(stringCopier(inputString2)).toStrictEqual(expectedResult2);
     });
+
+    it("when multiple instances of [CTRL+C] and [CTRL+V] are found, the content before is saved and pasted for each", () => {
+        const inputString = "the sun shines down[CTRL+C] on [CTRL+V][CTRL+C] the busy [CTRL+V].";
+        const expectedResult = "the sun shines down on the sun shines down the busy the sun shines down on the sun shines down."
+        expect(stringCopier(inputString)).toStrictEqual(expectedResult);
+    });
 });
